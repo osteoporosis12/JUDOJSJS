@@ -1,5 +1,5 @@
 import PrograAvan.Lineal.Lista;
-import com.sun.source.tree.NewArrayTree;
+
 
 public class MAIN {
     public static void main(String[] args) {
@@ -52,4 +52,5 @@ public class MAIN {
 
     }
 
+    //pinpon es un muñeco
 }
