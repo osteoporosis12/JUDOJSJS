@@ -17,6 +17,8 @@ public class MAIN {
         judokas.insertar(xd1);
 
 
+        // XD
+
         Lista<Club> clubes = new Lista<>();
 
         Club c1 = new Club("COBRA KAI", "C27234", "CALLE LA PAZ #1210", judokas);
