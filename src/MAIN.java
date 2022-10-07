@@ -16,6 +16,7 @@ public class MAIN {
         judokas.insertar(xd);
         judokas.insertar(xd1);
 
+        // ESTOY PROBANDO SI DA XD
 
         Lista<Club> clubes = new Lista<>();
 
