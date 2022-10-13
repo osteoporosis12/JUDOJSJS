@@ -5,10 +5,10 @@ public class Municipio {
     String personeria;
     Lista<Club> clubes;
 
-    public Municipio(String nombre, String personeria, Lista<Club> clubes) {
+    public Municipio(String nombre, String personeria) {
         this.nombre = nombre;
         this.personeria = personeria;
-        this.clubes = clubes;
+        this.clubes = new Lista<Club>();
     }
 
     public String getNombre() {
@@ -31,10 +31,11 @@ public class Municipio {
         return clubes;
     }
 
-    public void setClubes(Lista<Club> clubes) {
-        this.clubes = clubes;
+    public void anadir_club(Club club) {
+
+        this.clubes.insertar(club);
     }
-    public void mostrarClubes()
+    /*public void mostrarClubes()
     {
         for (Club c: clubes)
         {
@@ -55,7 +56,7 @@ public class Municipio {
         for(Club c : clubes){
             c.mostrarPorCategorias(ca);
         }
-    }
+    }*/
     @Override
     public String toString() {
         return "Municipio{" +

@@ -163,7 +163,7 @@ public class ArbolRB<Llave extends Comparable<Llave>, Valor> {
         while(!p.esta_vacia())
         {
             aux=p.desempilar();
-            System.out.println(aux.llave);
+            System.out.println(aux.valor + " { Id: " + aux.llave + " } ");
             if(aux.izquierda!=null) p.empilar(aux.izquierda);
             if(aux.derecha!=null) p.empilar(aux.derecha);
         }
@@ -175,7 +175,7 @@ public class ArbolRB<Llave extends Comparable<Llave>, Valor> {
         while(!c.esta_vacio())
         {
             aux=c.desencolar();
-            System.out.println(aux.llave);
+            System.out.println(aux.valor + " { Id: " + aux.llave + " } ");
             if(aux.izquierda!=null) c.encolar(aux.izquierda);
             if(aux.derecha!=null) c.encolar(aux.derecha);
         }

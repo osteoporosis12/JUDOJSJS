@@ -1,17 +1,16 @@
-import PrograAvan.Lineal.Lista;
+import PrograAvan.NoLineal.ArbolRB;
 
 public class Club {
     String nombre;
     String personeria;
     String direccion;
+    ArbolRB<Integer, JUDOKA> judokas;
 
-    Lista<JUDOKA> judokas;
-
-    public Club(String nombre, String personeria, String direccion, Lista<JUDOKA> judokas) {
+    public Club(String nombre, String personeria, String direccion) {
         this.nombre = nombre;
         this.personeria = personeria;
         this.direccion = direccion;
-        this.judokas = judokas;
+        this.judokas = new ArbolRB<Integer, JUDOKA>();
     }
 
     public String getNombre() {
@@ -38,14 +37,14 @@ public class Club {
         this.direccion = direccion;
     }
 
-    public Lista<JUDOKA> getJudokas() {
+    public ArbolRB<Integer,JUDOKA> getJudokas() {
         return judokas;
     }
 
-    public void setJudokas(Lista<JUDOKA> judokas) {
-        this.judokas = judokas;
+    public void anadir_Judoka(int llav, JUDOKA judoka) {
+        judokas.insertar(llav, judoka);
     }
-    public void mostrarJudokas()
+    /*public void mostrarJudokas()
     {
         for(JUDOKA n: judokas){
             System.out.println(n);
@@ -57,7 +56,7 @@ public class Club {
                 System.out.println(n);
             }
         }
-    }
+    }*/
 
     @Override
     public String toString() {
